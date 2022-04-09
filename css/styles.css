@@ -35,6 +35,8 @@ body {
   color: var(--primary-text-color);
   background-color: #fff;
 }
+/*.header {
+}*/
 
 h1,
 h2,
@@ -50,16 +52,31 @@ h2 {
   letter-spacing: 0.03em;
   text-align: center;
 }
-
+ul {
+  list-style: none;
+}
+.main-container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+}
 address {
   font-style: normal;
 }
-.list {
-  list-style: none;
-}
+
 /*index.html*/
 /*логотип*/
 .logo {
+  display: inline-block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
   color: #000;
   font-family: Raleway;
   font-weight: 700;
@@ -67,30 +84,70 @@ address {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  margin-right: 95px;
 }
 .logo-accent {
   color: var(--accent-color);
 }
 /*навигация*/
 .navigation {
-  color: var(
-    --secondary-text-color
-  ); /*чи потрібно тут задавати колір тексту, якщо для посилань все рівно треба перевизначити?*/
+  color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.navigation-item {
+.navigation-list {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+/*Спосіб №1 Як позбутись крайньої геометрії*/
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/*Спосіб №2 Як позбутись крайньої геометрії*/
+/*.navigation-item {        
+  margin-right: 50px;
+}
+.navigation-item:last-child {
+  margin-right: 0%;
+}*/
+
+/*Спосіб №3 Як позбутись крайньої геометрії - застосується до всіх, крім першого
+.navigation-item + .navigation-item {
+  margin-left: 50px;
+}*/
+.navigation-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
   text-decoration: none;
 }
-.navigation-item:hover,
-.navigation-item:focus {
+.navigation-link:hover,
+.navigation-link:focus {
   color: var(--accent-color);
 }
 /*контакты*/
+.contacts-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
 .contacts-link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
