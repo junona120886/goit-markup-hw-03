@@ -35,16 +35,17 @@ body {
   color: var(--primary-text-color);
   background-color: #fff;
 }
-/*.header {
-}*/
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   color: var(--secondary-text-color);
+}
+p {
+  margin: 0;
 }
 h2 {
   font-size: 36px;
@@ -53,29 +54,46 @@ h2 {
   text-align: center;
 }
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
+address {
+  font-style: normal;
+}
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /*outline: 1px solid red;*/
+}
 .main-container {
-  width: 1200px;
-  padding: 0 15px;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+
+  /* outline: 1px solid red;*/
 }
 .flex-container {
   display: flex;
   align-items: center;
 }
-address {
-  font-style: normal;
+.section-title {
+  margin-bottom: 50px;
+}
+.button-base {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
 }
 
 /*index.html*/
 /*логотип*/
 .logo {
   display: inline-block;
-  padding-top: 25px;
-  padding-bottom: 25px;
 
   color: #000;
   font-family: Raleway;
@@ -97,6 +115,8 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  /*outline: 1px solid red;*/
 }
 .navigation-list {
   display: flex;
@@ -124,8 +144,8 @@ address {
 }*/
 .navigation-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /*padding-top: 32px;
+  padding-bottom: 32px;*/
 
   color: var(--secondary-text-color);
   text-decoration: none;
@@ -145,8 +165,8 @@ address {
 }
 .contacts-link {
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-top: 32px;
+  padding-bottom: 32px;*/
 
   color: var(--primary-text-color);
   font-weight: 500;
@@ -162,11 +182,12 @@ address {
 
 /*hero*/
 .hero {
-  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   background-color: var(--accent-background-color);
 
-  /*text-align: center;*/
+  /*outline: 1px solid red;*/
 }
 .hero-title {
   color: var(--primary-white);
@@ -176,6 +197,8 @@ address {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 .button-primary {
   background-color: var(--primary-button-color);
@@ -188,7 +211,6 @@ address {
   letter-spacing: 0.03em;
   border-style: none;
 }
-/* не зрозуміло з макету, чи колір при hover/focus i active різний?*/
 .button-primary:hover,
 .button-primary:focus {
   background-color: var(--button-hover-color);
@@ -199,9 +221,10 @@ address {
   color: var(--primary-white);
 }
 .button-order {
-  /*як вирівнять кнопку по центру секції?*/
   width: 200px;
   height: 50px;
+  border-radius: 4px;
+  margin: 0 auto;
 
   background-color: var(--accent-color);
   color: var(--primary-white);
@@ -219,6 +242,9 @@ address {
 
 /*our goals*/
 .goals {
+  padding-top: 95px;
+  padding-bottom: 95px;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -226,22 +252,49 @@ address {
 }
 .goals_title {
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.goals-item:not(:last-child) {
+  margin-right: 30px;
 }
 
+/*about*/
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-content {
+  width: 370px;
+}
 /*team*/
 .team {
   background-color: var(--secondary-background-color);
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
-.member-item {
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.member-card {
   width: 270px;
-  height: 370px;
-
-  background-color: var(--primary-white);
+  min-height: 368px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 
   text-align: center;
+
+  background-color: var(--primary-white);
+}
+.member-photo {
+  display: block;
+  width: 270px;
+  height: 260px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 .member-title {
   font-weight: 500;
@@ -249,6 +302,7 @@ address {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-transform: initial;
+  margin-bottom: 10px;
 }
 .member-position {
   font-size: 16px;
@@ -257,11 +311,13 @@ address {
 }
 /*footer*/
 .footer {
-  height: 250px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background-color: var(--accent-background-color);
 }
 .footer-logo {
+  display: block;
   color: var(--primary-white);
   font-family: Raleway;
   font-weight: 700;
@@ -269,20 +325,25 @@ address {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  margin-bottom: 20px;
 }
-.footer-text {
+.adress-text {
   color: var(--footer-text-color);
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.footer-adress {
+.location {
   color: var(--primary-white);
 }
-.footer-text:hover,
-.footer-text:focus {
+.adress-text:hover,
+.adress-text:focus {
   color: var(--accent-color);
+}
+.adress-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 /*portfolio.html*/
 .portfolio-title {
