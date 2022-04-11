@@ -250,7 +250,10 @@ address {
   letter-spacing: 0.03em;
   text-align: left;
 }
-.goals_title {
+.goals-content {
+  max-width: 270px;
+}
+.goals-title {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -263,7 +266,10 @@ address {
 }
 
 /*about*/
-
+.about {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -294,7 +300,10 @@ address {
   width: 270px;
   height: 260px;
   margin: 0;
-  margin-bottom: 30px;
+}
+.member-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .member-title {
   font-weight: 500;
