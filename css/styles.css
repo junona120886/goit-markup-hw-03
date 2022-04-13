@@ -69,12 +69,12 @@ address {
   /*outline: 1px solid red;*/
 }
 .main-container {
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
+  /* align-items: center; - не працює, бо не flex*/
 
   /* outline: 1px solid red;*/
 }
@@ -255,6 +255,12 @@ address {
   letter-spacing: 0.03em;
   text-align: left;
 }
+.goals-main-title {
+  display: block;
+  max-height: 0;
+  max-width: 0;
+  visibility: hidden;
+}
 .goals-content {
   max-width: 270px;
 }
@@ -269,10 +275,8 @@ address {
 .goals-item:not(:last-child) {
   margin-right: 30px;
 }
-
 /*about*/
 .about {
-  padding-top: 95px;
   padding-bottom: 95px;
 }
 .about-item:not(:last-child) {
